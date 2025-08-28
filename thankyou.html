@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Thank You!</title>
+        <link rel="stylesheet" href="styles/thankyou.css">
+    </head>
+    <body>
+        <div class="thankyou-container">
+            <img src="images/murachlogo.jpg" alt="Murach" width="100">
+            <h1>Thank You!</h1>
+            <p>We appreciate your feedback.<br>
+            Your survey has been submitted successfully.</p>
+            <div id="customer-info"></div>
+            <a href="index.html">Back to Home</a>
+        </div>
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const info = [
+                { label: "First Name", value: params.get("firstName") },
+                { label: "Last Name", value: params.get("lastName") },
+                { label: "Email", value: params.get("email") },
+                { label: "Date of Birth", value: params.get("dateOfBirth") },
+                { label: "Heard From", value: params.get("heardFrom") },
+                { label: "Wants Updates", value: params.get("wantsUpdates") ? "Yes" : "No" },
+                { label: "Email Announcements", value: params.get("emailOK") ? "Yes" : "No" },
+                { label: "Contact Via", value: params.get("contactVia") }
+            ];
+            let html = "<h2>Your Information:</h2><ul style='list-style:none;padding:0;'>";
+            info.forEach(i => {
+                html += `<li><strong>${i.label}:</strong> ${i.value ? i.value : "(not provided)"}</li>`;
+            });
+            html += "</ul>";
+            document.getElementById("customer-info").innerHTML = html;
+        </script>
+    </body>
+</html>
