@@ -1,0 +1,112 @@
+/* The styles for the elements */
+body { 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90%;
+    margin: 2em auto;
+    width: 420px;
+    background: #e0f7fa; /* hoặc #e0f7fa */
+    border-radius: 16px;
+}
+h1 {     
+    font-size: 180%;
+    color: #008080;
+    text-shadow: 0 2px 8px #b2dfdb;
+    font-weight: bold;
+    margin-bottom: .5em;    
+}
+h2 {     
+    font-size: 120%;
+    color: #008080;
+    text-shadow: 0 2px 8px #b2dfdb;
+    font-weight: bold;
+    margin-bottom: .5em;    
+}
+label {
+    float: left;
+    width: 8em;
+    margin-bottom: 0.5em;
+    padding-top: .3em;
+    font-weight: bold;
+    color: #006064;
+}
+input[type="text"], input[type="email"], input[type="date"], select {  /* An attribute selector */
+    width: 16em;
+    margin-left: 0.5em;    
+    margin-bottom: 0.5em;
+    padding: 0.4em;
+    border: 1px solid #b2dfdb;
+    border-radius: 6px;
+    transition: border-color 0.2s;
+}
+input[type="text"]:focus, input[type="email"]:focus, input[type="date"]:focus, select:focus {
+    border-color: #008080;
+    outline: none;
+}
+span {
+    margin-left: 0.5em;    
+    margin-bottom: 0.5em;    
+}
+br {
+    clear: both;
+}
+
+/* The styles for the classes */
+.pad_top {
+    padding-top: 0.25em;
+}
+.margin_left {
+    margin-left: 0.5em;
+}
+
+/* The styles for a table */
+table {
+    border: 1px solid black;
+    border-collapse: collapse;   
+}
+th, td {
+    border: 1px solid black;
+    text-align: left;
+    padding: .5em;
+}
+.right {
+    text-align: right;
+}
+
+/* Trang trí cho form */
+form {
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+/* Logo bo tròn */
+img {
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 1em;
+}
+
+/* Radio và checkbox */
+input[type="radio"], input[type="checkbox"] {
+    accent-color: #008080;
+    margin-right: 0.3em;
+}
+
+/* Nút submit */
+input[type="submit"] {
+    background: #008080;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7em 2em;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 1em;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    transition: background 0.2s;
+}
+
+input[type="submit"]:hover {
+    background: #006064;
+}
